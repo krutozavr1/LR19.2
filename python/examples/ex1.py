@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
+import os.path
 import argparse
 import json
-import os.path
-import sys
 from datetime import date
 
 def add_worker(staff, name, post, year):
@@ -12,11 +12,11 @@ def add_worker(staff, name, post, year):
     Добавить данные о работнике.
     """
     staff.append(
-    {
-        "name": name,
-        "post": post,
-        "year": year
-    }
+        {
+            "name": name,
+            "post": post,
+            "year": year
+        }
     )
     return staff
 
@@ -28,10 +28,10 @@ def display_workers(staff):
     if staff:
         # Заголовок таблицы.
         line = '+-{}-+-{}-+-{}-+-{}-+'.format(
-        '-' * 4,
-        '-' * 30,
-        '-' * 20,
-        '-' * 8
+            '-' * 4,
+            '-' * 30,
+            '-' * 20,
+            '-' * 8
         )
         print(line)
         print(
